@@ -123,7 +123,7 @@ router.post('/:id/update', (req, res)=>{
 }
 });
 router.get("/:user/alldweets/", (req, res)=>{
-    Dweeter.find({posted_by_name:req.params.user}).then(gotcha=>{
+    Dweeter.find({posted_by_name:req.params.user}).sort([['last_updated_at', -1]]).then(gotcha=>{
         if(gotcha){
             res.render("userDweets.ejs", {display:gotcha});
         }

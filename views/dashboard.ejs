@@ -7,9 +7,10 @@
     <a href="/dweet/<%= result._id %>" style="color:green;">
         <%= result.dweet %>
     </a>
-    <p style="margin-top:10px;color:red;font-size:20px;">
-        Says
+    <p style="margin-top:10px;font-size:20px;">
+        <a style="color:blue;"href="/dweet/<%= result.posted_by_name%>/alldweets">Says
         <%= result.posted_by_name %>
+        </a>
         <p style="font-size:10px;">
         At
         <%= result.posted_at %>

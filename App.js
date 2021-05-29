@@ -1,11 +1,10 @@
 const express=require("express")
 const mongoose=require("mongoose");
-const fs=require("fs");
+require("dotenv").config();
 const path=require("path");
 const cookies=require("cookie-parser");
-const secrets=JSON.parse(fs.readFileSync(path.join(__dirname, "secrets.json")));
-console.log(secrets);  
-const uri=`mongodb+srv://User1:${secrets.password}@projectdweeps.ncacg.mongodb.net/Everything?retryWrites=true&w=majority`;
+const uri=process.env.DB_URI;
+console.log(uri);
 mongoose.connect(uri, {useNewUrlParser:true, useUnifiedTopology:true}).then(
    ()=>{ console.log("Connection Established")}
 ).catch(err=>{console.error(err)})
