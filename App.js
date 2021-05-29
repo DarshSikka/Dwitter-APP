@@ -4,7 +4,6 @@ require("dotenv").config();
 const path=require("path");
 const cookies=require("cookie-parser");
 const uri=process.env.DB_URI;
-console.log(uri);
 mongoose.connect(uri, {useNewUrlParser:true, useUnifiedTopology:true}).then(
    ()=>{ console.log("Connection Established")}
 ).catch(err=>{console.error(err)})
