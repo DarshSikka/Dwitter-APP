@@ -1,0 +1,23 @@
+<div style="color:green;font-size:20px;display:flex;flex-direction: column;align-content: space-around;" class="container">
+    <i style="margin-top:20px;">Dweet Text:
+    <%= dweet.dweet %>
+    </i>
+    <br>
+    <i style="margin-top:40px;"> Last Updated At:
+    <%= dweet.last_updated_at %>
+    </i>
+    <br>
+    <i style="margin-top:40px;">Posted By:
+    <%= dweet.posted_by_name %>
+    </i>
+    <br>
+    <i style="margin-top:40px;">Posted At:
+    <%= dweet.posted_at %>
+    </i>
+    <br>
+    <i style="margin-top:40px;"> Id:
+    <%= dweet._id %>
+    </i>
+    <button style="height:40px;width:200px;"><a href="/dweet/<%= dweet._id%>/update"> Update</a></button>
+    <button style="height:40px;width:200px;"><a href="/dweet/<%= dweet._id%>/delete"> Delete</a></button>
+</div>

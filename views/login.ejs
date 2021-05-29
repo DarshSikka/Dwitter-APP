@@ -1,0 +1,20 @@
+<div>
+    <div class="card card-body">
+        <center>
+        <h1 style="margin-top:30px"class="text-center"><i class="fa fa-user"></i>Login</h1>
+        <form action="/users/login" method="POST">
+            <% if(typeof send_to_user!='undefined'){ %>
+               <div style="background-color:red;">
+                <b>
+                    <%= send_to_user[0] %>
+                </b>
+                </div>
+            <% }%>
+    <span><label style="margin-top:30px;"for="name">Name:</label><input style="height:30px" name="name" id="name"></span>
+    <span><label style="margin-top:30px;"for="password">Password:</label><input style="height:30px"type="password" name="password" id="password"></span>
+    <br>
+    <input style="height:50px;background-color:wheat;margin-top:30px;width:100px;"type="submit" value="Login">
+   <br> <a href="/users/register">Register Instead</a>
+        </center></form>
+    </div>
+    </div>

@@ -1,0 +1,22 @@
+<center><h1>Welcome</h1><button><a href="/logout">Logout</a></button>
+    <br>
+    <button><a href="/dweet/">Home</a></button><br>
+<p>Click on a dweet text to view it in expanded view</p>
+<div>
+<% display.forEach(function(result){%>
+    <a href="/dweet/<%= result._id %>" style="color:green;">
+        <%= result.dweet %>
+    </a>
+    <p style="margin-top:10px;color:red;font-size:20px;">
+        Says
+        <%= result.posted_by_name %>
+        <p style="font-size:10px;">
+        At
+        <%= result.posted_at %>
+        And Last updated at:
+        <%= result.last_updated_at %>
+        </p>
+    </p>
+<% })%>
+</div>
+</center>
